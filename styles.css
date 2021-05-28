@@ -1,0 +1,378 @@
+:root {
+  --cursive: "Cedarville Cursive", cursive;
+  --primColor: rgb(70, 226, 70);
+  --tansition: all 0.3s;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+  color: grey;
+}
+
+/* -------------nav--------=-- */
+.nav-btn {
+  font-size: 2.8rem;
+  z-index: 1;
+  color: var(--primColor);
+  position: fixed;
+  text-align: left;
+  animation: aninav 2s linear infinite;
+}
+
+.mynav {
+  background-color: gray;
+  position: fixed;
+}
+/* -----------Header */
+
+.header {
+  min-width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(41, 49, 38, 0.4), rgba(27, 36, 30, 0.5)),
+    url(./Images/mainbg.jpg) center/cover fixed no-repeat;
+  position: relative;
+  /* padding-top: 50%; */
+}
+
+.brandInsight {
+  font-size: 3.2rem;
+  font-weight: bolder;
+  color: var(--primColor);
+  line-height: 3.3rem;
+  font-family: var(--cursive);
+}
+.brand {
+  margin: 8% 0;
+  font-size: 7rem;
+  color: aliceblue;
+  animation: anihead 4s ease-in-out 1;
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+/* _______button_____________ */
+.headButton {
+  font-size: 3rem;
+  width: 27%;
+  border-radius: 5px;
+  display: inline;
+  background-color: var(--primColor);
+  padding: 1rem;
+  outline: 0.4rem solid var(--primColor);
+  outline-offset: 0.7rem;
+  /* ANIMATION */
+}
+
+.buttondiv {
+  /* animation */
+
+  position: relative;
+  animation: anibutton 4s ease-in-out 1;
+  animation-fill-mode: backwards;
+}
+
+.subheading {
+  position: relative;
+  animation: anisubhead 4s ease-in-out 1;
+}
+
+.headButton a:link {
+  text-decoration: none;
+  color: rgba(25, 31, 27, 0.5);
+}
+
+.headButton:hover,
+a:link:hover {
+  opacity: 0.7;
+  color: aliceblue;
+}
+
+/* -----------ANIMATIONS--------------- */
+
+@keyframes aninav {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anibutton {
+  25% {
+    transform: scale(2);
+  }
+
+  75% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes anihead {
+  0% {
+    transform: translateX(100%);
+  }
+
+  70% {
+    transform: translateX(-60%);
+  }
+}
+
+@keyframes anisubhead {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  70% {
+    transform: translateX(60%);
+  }
+}
+
+@keyframes anifeatures {
+  50% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes imgzoom {
+  50% {
+    transform: scale(1.2);
+  }
+}
+/* ---------header divider--------- */
+
+.postheader {
+  height: 0.5rem;
+  width: 100%;
+
+  background: linear-gradient(to left, green, orange, green);
+}
+
+/* --------------features------ */
+.features {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(179, 168, 168, 0.952);
+  font-size: 1.4rem;
+  text-align: center;
+}
+.features .container-fluid {
+  padding: 4rem 0;
+}
+.features .fas {
+  padding: 2.2rem 0;
+  font-size: 4.5rem;
+}
+
+.features .row .col-sm-12:hover {
+  position: relative;
+}
+
+.features .row .col-sm-12 h1 {
+  letter-spacing: 0.5rem;
+}
+
+.features .row .col-sm-12:hover {
+  background-color: var(--primColor);
+  color: aliceblue;
+  animation: anifeatures 1s ease-in-out 1;
+}
+
+/* --------------------------features-divider----------------- */
+
+.post-features {
+  height: 0.5rem;
+  width: 100%;
+
+  background: linear-gradient(to left, green, orange, green);
+}
+
+/* ---------------------about---------------------------------- */
+
+.about {
+  padding-top: 3rem;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.about-head {
+  padding: 2rem 0;
+  font-size: 2.5rem;
+  font-family: var(--cursive);
+  font-weight: bolder;
+  color: rgb(32, 179, 32);
+}
+.about-data {
+  font-size: 1.5rem;
+}
+.about-para {
+  padding-bottom: 4rem;
+}
+
+.about-img-container {
+  background-color: var(--primColor);
+  border-radius: 2rem;
+  border: var(--primColor) solid 1rem;
+  overflow: hidden;
+}
+
+.about-img {
+  /* display: block; */
+  height: 100%;
+  width: 100%;
+}
+
+.img-height-adj {
+  margin: 0 auto;
+  max-height: 60%;
+  max-width: 60%;
+}
+.about-button {
+  padding: 2rem 0;
+  /* top: 10%; */
+
+  outline: var(--primColor) solid 0.4rem;
+  outline-offset: 0.5rem;
+  height: 20%;
+  width: 27%;
+  background-color: var(--primColor);
+  margin: 0 auto;
+}
+
+.about-img-container:hover .about-img {
+  animation: imgzoom 2s 1;
+}
+
+.about-button:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+/* -------------------products---------------------- */
+
+.products {
+  background-color: grey;
+}
+
+.products-img {
+  height: 100%;
+  width: 100%;
+}
+
+.products-img-contain {
+  background-color: var(--primColor);
+  border-radius: 2rem;
+  border: var(--primColor) solid 0.2rem;
+  overflow: hidden;
+}
+
+.img-height-adj1 {
+  max-height: 50%;
+  max-width: 90%;
+}
+
+.img-height-adj2 {
+  max-height: 50%;
+  max-width: 80%;
+}
+
+.img-height-adj3 {
+  max-height: 50%;
+  max-width: 100%;
+}
+.price {
+  animation: imgzoom 1.5s infinite;
+  color: white;
+  padding: 4rem;
+}
+
+.product-descrip {
+  font-size: 1.7rem;
+  padding: 4rem 0;
+  background-color: grey;
+}
+
+.product-descrip h1 {
+  padding-top: 3rem;
+  color: var(--primColor);
+  font-size: 3rem;
+  font-family: var(--cursive);
+  font-weight: bold;
+}
+
+.price h2 {
+  color: var(--primColor);
+  font-weight: bolder;
+  font-size: 2.2rem;
+}
+
+.product-descrip span {
+  color: white;
+}
+
+.products-img-contain:hover .products-img {
+  animation: imgzoom 2s 1;
+}
+
+.price:hover {
+  animation: none;
+  transform: scale(1.2);
+  color: black;
+}
+
+/* -----------------contact---------------- */
+
+.contact-head {
+  padding-top: 4rem;
+  color: var(--primColor);
+}
+
+.details {
+  display: block;
+  font-size: 1.7rem;
+  padding: 2rem;
+}
+
+.detail-control {
+  /* padding: 6rem 0; */
+  margin: 2rem 0;
+  border-style: none;
+
+  border-bottom: 2px solid var(--primColor);
+}
+.detail-control {
+  padding: 1rem 0;
+  margin-top: 3rem;
+  font-size: 1.7rem;
+}
+.detail-control::placeholder {
+  font-weight: bold;
+}
+
+.footer {
+  color: gray;
+  background: black;
+  padding: 2rem 0;
+  font-size: 1.3rem;
+}
+
+.footer i:hover {
+  color: var(--primColor);
+}
